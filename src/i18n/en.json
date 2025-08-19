@@ -1,0 +1,14 @@
+{
+    "home": "Home",
+    "games": "Games",
+    "missions": "Missions",
+    "leaderboard": "Leaderboard",
+    "play": "Play",
+    "welcome": "Welcome to MathQuest",
+    "hero-description": "Embark on an epic mathematical adventure!",
+    "setup-game": "Setup Game",
+    "select-grade": "Select Grade:",
+    "select-mode": "Select Mode:",
+    "remember-choice": "Remember my choice",
+    "start": "Start"
+}

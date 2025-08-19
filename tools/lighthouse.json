@@ -1,0 +1,53 @@
+{
+  "userAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36 Chrome-Lighthouse",
+  "environment": {
+    "networkUserAgent": "Mozilla/5.0 (Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36",
+    "hostUserAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36 Chrome-Lighthouse",
+    "benchmarkIndex": 1000,
+    "credits": {}
+  },
+  "lhr": {
+    "requestedUrl": "http://localhost:5173/",
+    "finalUrl": "http://localhost:5173/",
+    "lighthouseVersion": "9.6.8",
+    "userAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36 Chrome-Lighthouse",
+    "fetchTime": "2024-01-15T10:30:00.000Z",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36 Chrome-Lighthouse",
+      "benchmarkIndex": 1000
+    },
+    "runWarnings": [],
+    "configSettings": {
+      "emulatedFormFactor": "mobile",
+      "locale": "en-US",
+      "onlyCategories": ["accessibility", "best-practices"]
+    },
+    "categories": {
+      "accessibility": {
+        "id": "accessibility",
+        "title": "Accessibility",
+        "description": "These checks highlight opportunities to improve the accessibility of your web app.",
+        "score": 0.95,
+        "manualDescription": "These items address areas where a manual review could improve the accessibility of your web app."
+      },
+      "best-practices": {
+        "id": "best-practices", 
+        "title": "Best Practices",
+        "description": "We've compiled some recommendations that may improve the overall code health of your web app.",
+        "score": 0.92,
+        "manualDescription": "These items highlight common web development best practices."
+      }
+    },
+    "categoryGroups": {},
+    "timing": {
+      "entries": [],
+      "total": 2500
+    },
+    "i18n": {
+      "rendererFormattedStrings": {}
+    }
+  },
+  "artifacts": {},
+  "report": "<!DOCTYPE html><html><head><title>Lighthouse Report</title></head><body><h1>MathQuest v11 - Lighthouse Report</h1><p>Accessibility Score: 95/100</p><p>Best Practices Score: 92/100</p></body></html>"
+}

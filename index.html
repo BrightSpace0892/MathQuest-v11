@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathQuest</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <!-- A11y Live Region -->
+    <div id="a11y-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    
+    <!-- Main App Container -->
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>MathQuest</h1>
+                    </div>
+                    <nav class="desktop-nav">
+                        <a href="/" data-route="/" data-i18n="home">Home</a>
+                        <a href="/games" data-route="/games" data-i18n="games">Games</a>
+                        <a href="/missions" data-route="/missions" data-i18n="missions">Missions</a>
+                        <a href="/leaderboard" data-route="/leaderboard" data-i18n="leaderboard">Leaderboard</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Home Page -->
+            <section id="home" class="page active">
+                <div class="hero">
+                    <!-- Lantern Overlay -->
+                    <div class="lanterns"></div>
+                    
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 data-i18n="welcome">Welcome to MathQuest</h2>
+                            <p data-i18n="hero-description">Embark on an epic mathematical adventure!</p>
+                            
+                            <!-- Crystal Orb Widget -->
+                            <div class="crystal-orb">
+                                <svg width="80" height="80" viewBox="0 0 80 80" class="orb-svg">
+                                    <defs>
+                                        <radialGradient id="orbGradient" cx="30%" cy="30%">
+                                            <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+                                            <stop offset="70%" style="stop-color:#4169E1;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#191970;stop-opacity:1" />
+                                        </radialGradient>
+                                    </defs>
+                                    <circle cx="40" cy="40" r="35" fill="url(#orbGradient)" stroke="#fff" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" fill="#fff" opacity="0.6"/>
+                                    <text x="40" y="45" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">XP</text>
+                                </svg>
+                            </div>
+                            
+                            <!-- Play Button -->
+                            <button id="btn-play" class="btn-primary sparkle" data-i18n="play">Play</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Games Page -->
+            <section id="games" class="page">
+                <div class="container">
+                    <h2 data-i18n="games">Games</h2>
+                    <p>Choose your mathematical challenge!</p>
+                </div>
+            </section>
+
+            <!-- Missions Page -->
+            <section id="missions" class="page">
+                <div class="container">
+                    <h2 data-i18n="missions">Missions</h2>
+                    <p>Complete quests to earn rewards!</p>
+                </div>
+            </section>
+
+            <!-- Leaderboard Page -->
+            <section id="leaderboard" class="page">
+                <div class="container">
+                    <h2 data-i18n="leaderboard">Leaderboard</h2>
+                    <p>See how you rank against other players!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Mobile Bottom Navigation -->
+        <nav class="mobile-nav">
+            <a href="/" data-route="/" class="nav-item">
+                <svg class="nav-icon">
+                    <use href="/assets/img/ui/icons.svg#home"></use>
+                </svg>
+                <span data-i18n="home">Home</span>
+            </a>
+            <a href="/games" data-route="/games" class="nav-item">
+                <svg class="nav-icon">
+                    <use href="/assets/img/ui/icons.svg#games"></use>
+                </svg>
+                <span data-i18n="games">Games</span>
+            </a>
+            <a href="/missions" data-route="/missions" class="nav-item">
+                <svg class="nav-icon">
+                    <use href="/assets/img/ui/icons.svg#quest"></use>
+                </svg>
+                <span data-i18n="missions">Missions</span>
+            </a>
+            <a href="/leaderboard" data-route="/leaderboard" class="nav-item">
+                <svg class="nav-icon">
+                    <use href="/assets/img/ui/icons.svg#progress"></use>
+                </svg>
+                <span data-i18n="leaderboard">Leaderboard</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Play Setup Bottom Sheet -->
+    <div id="play-sheet" class="bottom-sheet">
+        <div class="sheet-content">
+            <div class="sheet-header">
+                <h3 data-i18n="setup-game">Setup Game</h3>
+                <button id="sheet-cancel" class="btn-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="sheet-body">
+                <div class="form-group">
+                    <label for="grade-select" data-i18n="select-grade">Select Grade:</label>
+                    <select id="grade-select">
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="4">Grade 4</option>
+                        <option value="5">Grade 5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mode-select" data-i18n="select-mode">Select Mode:</label>
+                    <select id="mode-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="remember-choice">
+                        <span data-i18n="remember-choice">Remember my choice</span>
+                    </label>
+                </div>
+                <div class="sheet-actions">
+                    <button id="sheet-start" class="btn-primary" data-i18n="start">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fallback Icons SVG -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="home" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </symbol>
+            <symbol id="games" viewBox="0 0 24 24">
+                <path d="M21,6H3A1,1 0 0,0 2,7V17A1,1 0 0,0 3,18H21A1,1 0 0,0 22,17V7A1,1 0 0,0 21,6M20,16H4V8H20V16Z"/>
+            </symbol>
+            <symbol id="quest" viewBox="0 0 24 24">
+                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"/>
+            </symbol>
+            <symbol id="progress" viewBox="0 0 24 24">
+                <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+            </symbol>
+            <symbol id="teacher" viewBox="0 0 24 24">
+                <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+            </symbol>
+            <symbol id="map" viewBox="0 0 24 24">
+                <path d="M15,19L9,16.89V5L15,7.11M20.5,3C20.44,3 20.39,3 20.34,3L15,5.1L9,3L3.36,4.9C3.15,4.97 3,5.15 3,5.38V20.5A0.5,0.5 0 0,0 3.5,21C3.55,21 3.61,21 3.66,21L9,18.9L15,21L20.64,19.1C20.85,19.03 21,18.85 21,18.62V3.5A0.5,0.5 0 0,0 20.5,3Z"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
